@@ -22,12 +22,6 @@ Error: objdump failed! statics/globals/functions may not be properly classified:
     ENOENT means program not found. If that is not the issue, please report this problem.
 Launching gdb-server: /usr/bin/gdb-multiarch -p 50000 --no-reset
     Please check TERMINAL tab (gdb-server) for output from /usr/bin/gdb-multiarch
-Finished reading symbols from objdump: Time: 52 ms
-Finished reading symbols from nm: Time: 43 ms
+Finished reading symbols from objdump: Time: 27 ms
+Finished reading symbols from nm: Time: 23 ms
 
-Waiting for gdb server to start...[2026-01-31T02:12:50.533Z] SERVER CONSOLE DEBUG: onBackendConnect: gdb-server session connected. You can switch to "DEBUG CONSOLE" to see GDB interactions.
-/usr/bin/gdb-multiarch -p 50000 --no-reset
-/usr/bin/gdb-multiarch: unrecognized option '--no-reset'
-Use `/usr/bin/gdb-multiarch --help' for a complete list of options.
-[2026-01-31T02:12:50.589Z] SERVER CONSOLE DEBUG: onBackendConnect: gdb-server session closed
-GDB server session ended. This terminal will be reused, waiting for next session to start...

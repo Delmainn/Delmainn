@@ -25,3 +25,125 @@ Launching gdb-server: /usr/bin/gdb-multiarch -p 50000 --no-reset
 Finished reading symbols from objdump: Time: 27 ms
 Finished reading symbols from nm: Time: 23 ms
 
+ *  Executing task: make bin 
+
+make: Nothing to be done for 'bin'.
+ *  Terminal will be reused by tasks, press any key to close it. 
+
+ *  Executing task: make bin 
+
+make: Nothing to be done for 'bin'.
+ *  Terminal will be reused by tasks, press any key to close it. 
+
+ *  Executing task: make bin 
+
+make: Nothing to be done for 'bin'.
+ *  Terminal will be reused by tasks, press any key to close it. 
+
+ 
+
+{
+    "configurations": [
+      // {
+      //   "name": "JLink: Debug Application",
+      //   "cwd": "${workspaceFolder}/app",
+      //   "executable": "./firmware.elf",
+      //   "serverpath": "/usr/bin/JLinkGDBServer",
+      //   "servertype": "jlink",
+      //   "request": "launch",
+      //   "type": "cortex-debug",
+      //   "device": "STM32F401RE",
+      //   "runToEntryPoint": "main",
+      //   "interface": "swd",
+      //   "preLaunchTask": "build_debug"
+      // },
+      // {
+      //   "name": "JLink: Debug Bootloader",
+      //   "cwd": "${workspaceFolder}/bootloader",
+      //   "executable": "./bootloader.elf",
+      //   "serverpath": "/usr/bin/JLinkGDBServer",
+      //   "servertype": "jlink",
+      //   "request": "launch",
+      //   "type": "cortex-debug",
+      //   "device": "STM32F401RE",
+      //   "runToEntryPoint": "main",
+      //   "interface": "swd",
+      //   "preLaunchTask": "build_bootloader"
+      // },
+      // {
+      //   "name": "JLink: Attach to Application",
+      //   "cwd": "${workspaceFolder}/app",
+      //   "executable": "./firmware.elf",
+      //   "serverpath": "/usr/bin/JLinkGDBServer",
+      //   "servertype": "jlink",
+      //   "request": "attach",
+      //   "type": "cortex-debug",
+      //   "device": "STM32F401RE",
+      //   "runToEntryPoint": "main",
+      //   "interface": "swd"
+      // },
+      // {
+      //   "name": "JLink: Attach to Bootloader",
+      //   "cwd": "${workspaceFolder}/bootloader",
+      //   "executable": "./bootloader.elf",
+      //   "serverpath": "/usr/bin/JLinkGDBServer",
+      //   "servertype": "jlink",
+      //   "request": "attach",
+      //   "type": "cortex-debug",
+      //   "device": "STM32F401RE",
+      //   "runToEntryPoint": "main",
+      //   "interface": "swd",
+      //   "preLaunchTask": "build_bootloader"
+      // },
+      {
+        "name": "ST-Link: Debug Application",
+        "cwd": "${workspaceFolder}/app",
+        "executable": "./firmware.elf",
+        "serverpath": "/usr/bin/gdb-multiarch",
+        "servertype": "stutil",
+        "request": "launch",
+        "type": "cortex-debug",
+        "device": "STM32F411RE",
+        "runToEntryPoint": "main",
+        "interface": "swd",
+        "preLaunchTask": "build_debug"
+      },
+      {
+        "name": "ST-Link: Debug Bootloader",
+        "cwd": "${workspaceFolder}/bootloader",
+        "executable": "./bootloader.elf",
+        "serverpath": "/usr/bin/gdb-multiarch",
+        "servertype": "stutil",
+        "request": "launch",
+        "type": "cortex-debug",
+        "device": "STM32F411RE",
+        "runToEntryPoint": "main",
+        "interface": "swd",
+        "preLaunchTask": "build_bootloader"
+      },
+      {
+        "name": "ST-Link: Attach to Application",
+        "cwd": "${workspaceFolder}/app",
+        "executable": "./firmware.elf",
+        "serverpath": "/usr/bin/gdb-multiarch",
+        "servertype": "stutil",
+        "request": "attach",
+        "type": "cortex-debug",
+        "device": "STM32F411RE",
+        "runToEntryPoint": "main",
+        "interface": "swd"
+      },
+      {
+        "name": "ST-Link: Attach to Bootloader",
+        "cwd": "${workspaceFolder}/bootloader",
+        "executable": "./bootloader.elf",
+        "serverpath": "/usr/bin/gdb-multiarch",
+        "servertype": "stutil",
+        "request": "attach",
+        "type": "cortex-debug",
+        "device": "STM32F411RE",
+        "runToEntryPoint": "main",
+        "interface": "swd"
+      }
+    ]
+  }

@@ -11,10 +11,4 @@ Delmainn/Delmainn is a ✨ special ✨ repository because its `README.md` (this 
 You can click the Preview link to take a look at your changes.
 --->
 
-cd ~/Bare-Bootloader/app && \
-echo "=== 1. Checking OBJS files ===" && \
-ls -la src/*.c 2>/dev/null && \
-echo "=== 2. Checking linker script ===" && \
-ls -la linkerscript.ld && \
-echo "=== 3. Checking elf rule indentation ===" && \
-sed -n '/^elf:/,/^[^\t]/p' Makefile | cat -A
+make -d firmware.elf 2>&1 | grep -E "(Considering|Trying|Looking|No rule)" | head -30

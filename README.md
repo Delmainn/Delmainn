@@ -11,7 +11,23 @@ Delmainn/Delmainn is a ✨ special ✨ repository because its `README.md` (this 
 You can click the Preview link to take a look at your changes.
 --->
 
-delmain@Xubuntu:~$ which arm-none-eabi-gdb
-delmain@Xubuntu:~$ whereis arm-none-eabi-gdb
-arm-none-eabi-gdb:
+Cortex-Debug: VSCode debugger extension version 1.12.1 git(652d042). Usage info: https://github.com/Marus/cortex-debug#usage
+Reading symbols from /usr/bin/objdump-multiarch --syms -C -h -w /home/delmain/Bare-Bootloader/app/firmware.elf
+Reading symbols from /usr/bin/nm-multiarch --defined-only -S -l -C -p /home/delmain/Bare-Bootloader/app/firmware.elf
+Launching GDB: /usr/bin/gdb-multiarch -q --interpreter=mi2
+    IMPORTANT: Set "showDevDebugOutput": "raw" in "launch.json" to see verbose GDB transactions here. Very helpful to debug issues or report problems
+Error: /usr/bin/nm-multiarch failed! statics/global/functions may not be properly classified: Error: spawn /usr/bin/nm-multiarch ENOENT
+    Expecting `nm` next to `objdump`. If that is not the problem please report this.
+Error: objdump failed! statics/globals/functions may not be properly classified: Error: spawn /usr/bin/objdump-multiarch ENOENT
+    ENOENT means program not found. If that is not the issue, please report this problem.
+Launching gdb-server: /usr/bin/gdb-multiarch -p 50000 --no-reset
+    Please check TERMINAL tab (gdb-server) for output from /usr/bin/gdb-multiarch
+Finished reading symbols from objdump: Time: 52 ms
+Finished reading symbols from nm: Time: 43 ms
 
+Waiting for gdb server to start...[2026-01-31T02:12:50.533Z] SERVER CONSOLE DEBUG: onBackendConnect: gdb-server session connected. You can switch to "DEBUG CONSOLE" to see GDB interactions.
+/usr/bin/gdb-multiarch -p 50000 --no-reset
+/usr/bin/gdb-multiarch: unrecognized option '--no-reset'
+Use `/usr/bin/gdb-multiarch --help' for a complete list of options.
+[2026-01-31T02:12:50.589Z] SERVER CONSOLE DEBUG: onBackendConnect: gdb-server session closed
+GDB server session ended. This terminal will be reused, waiting for next session to start...

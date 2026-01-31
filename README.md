@@ -11,24 +11,10 @@ Delmainn/Delmainn is a ✨ special ✨ repository because its `README.md` (this 
 You can click the Preview link to take a look at your changes.
 --->
 
-Delmain@Xubuntu:~/Bare-Bootloader/app$ make -p 2>&1 | head -20
-make: *** No rule to make target 'firmware.elf', needed by 'elf'.  Stop.
-# GNU Make 4.3
-# Built for x86_64-pc-linux-gnu
-# Copyright (C) 1988-2020 Free Software Foundation, Inc.
-# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-# This is free software: you are free to change and redistribute it.
-# There is NO WARRANTY, to the extent permitted by law.
-
-# Make data base, printed on Fri Jan 30 20:08:12 2026
-
-# Variables
-
-# default
-PREPROCESS.S = $(CC) -E $(CPPFLAGS)
-# default
-COMPILE.m = $(OBJC) $(OBJCFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
-# environment
-GDK_BACKEND = x11
-# default
-ARFLAGS = rv
+cd ~/Bare-Bootloader/app && \
+echo "=== 1. Checking OBJS files ===" && \
+ls -la src/*.c 2>/dev/null && \
+echo "=== 2. Checking linker script ===" && \
+ls -la linkerscript.ld && \
+echo "=== 3. Checking elf rule indentation ===" && \
+sed -n '/^elf:/,/^[^\t]/p' Makefile | cat -A
